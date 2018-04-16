@@ -1,7 +1,6 @@
 import React from "react";
 
-export class Header extends React.Component{
-  render(){
+export const Header = (props) =>{
     return(
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
@@ -10,7 +9,7 @@ export class Header extends React.Component{
             <div className="collapse navbar-collapse">
               <ul className="navbar-nav">
                 <li className="nav-item active">
-                  <a className="nav-link" href="#">Home</a>
+                  <a className="nav-link" href="#">{props.homeLink}</a>
                 </li>
               </ul>
             </div>
@@ -18,5 +17,4 @@ export class Header extends React.Component{
         </div>
       </nav>
     );
-  }
-}
+};
